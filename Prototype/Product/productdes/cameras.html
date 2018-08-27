@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mens</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		 /* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+
+} 
+.checked {
+    color: orange;
+}
+	</style>
+	<script>
+		function openCity(evt, cityName) {
+		    // Declare all variables
+		    var i, tabcontent, tablinks;
+
+		    // Get all elements with class="tabcontent" and hide them
+		    tabcontent = document.getElementsByClassName("tabcontent");
+		    for (i = 0; i < tabcontent.length; i++) {
+		        tabcontent[i].style.display = "none";
+		    }
+
+		    // Get all elements with class="tablinks" and remove the class "active"
+		    tablinks = document.getElementsByClassName("tablinks");
+		    for (i = 0; i < tablinks.length; i++) {
+		        tablinks[i].className = tablinks[i].className.replace(" active", "");
+		    }
+
+		    // Show the current tab, and add an "active" class to the button that opened the tab
+		    document.getElementById(cityName).style.display = "block";
+		    evt.currentTarget.className += " active";
+		} 
+	</script>
+</head>
+<body>
+	<div class="img">
+		<img src="../productimages/cameras/1.jpg" alt="mens" width="300px" height="300px">
+	</div>
+	<div class="details" style="width: 500px; margin-top: -300px; margin-left: 500px;">
+		<h4>Canon 1300D - 18.0 MP - 3x Optical Zoom - DSLR Cameran</h4>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+		<span><a href="../../reviewForm.html">Write a Review</a></span>
+		<hr>
+		
+		<span>$90</span>
+		<a href="../addtocart.html">Buy Now</a>
+		<a href="#">Add To Wishlist</a>
+	</div>
+	 <!-- Tab links -->
+	<div class="tab" style="margin-top: 200px;">
+	  <button class="tablinks" onclick="openCity(event, 'London')">Review</button>
+	  <button class="tablinks" onclick="openCity(event, 'Paris')">Description</button>
+	  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Payment Guide</button>
+	</div>
+
+	<!-- Tab content -->
+	<div id="London" class="tabcontent">
+	  <h3>Reviews</h3>
+	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+	</div>
+
+	<div id="Paris" class="tabcontent">
+	  <h3>Descrintions</h3>
+	  <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+	</div>
+
+	<div id="Tokyo" class="tabcontent">
+	  <h3>Payment Guide</h3>
+	  <p>
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Sed vel massa in mi dignissim mollis sed a felis.
+    Sed non ante a urna pulvinar volutpat et ac justo.
+
+    Maecenas non leo at enim dictum mattis.
+    Nam non sapien consequat, fringilla orci sit amet, euismod turpis.
+    Phasellus mattis erat id magna ullamcorper porttitor.
+    Donec a metus ac lorem iaculis dictum in id eros.
+
+    Phasellus suscipit orci vel arcu tempor, vitae pretium neque efficitur.
+    Morbi at est molestie, placerat erat a, tempor dolor.
+    Nam in dui molestie, placerat justo sit amet, vestibulum est.
+    Mauris tincidunt eros et viverra sagittis.
+    Vivamus vitae nisl sit amet orci gravida efficitur.
+
+</p>
+	</div> 
+</body>
+</html>

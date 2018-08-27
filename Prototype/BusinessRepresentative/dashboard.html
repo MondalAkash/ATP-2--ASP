@@ -1,0 +1,101 @@
+<head>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['White Shirt',     100],
+          ['Blue T-Shirt',      60],
+          ['Sports Watch',  30],
+          ['Black Belt', 50]
+        ]);
+
+        var options = {
+          title: 'My Product Availability Status',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+<script language="JavaScript">
+function drawChart() {
+// Define the chart to be drawn.
+var data = google.visualization.arrayToDataTable([
+['Product Name', 'Sales'],
+['White Shirt', 20],
+['Sports Watch', 25],
+['Sports Shoe', 10],
+['Blue T-Shirt', 15]
+
+]);
+var options = {
+title: 'Todays Sales Status',
+isStacked:true  
+};
+// Instantiate and draw the chart.
+var chart = new google.visualization.BarChart(document.getElementById('container'));
+chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChart);
+</script>
+
+
+
+<script type="text/javascript">
+      google.charts.load('current', {
+        'packages':['geochart'],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+      });
+      google.charts.setOnLoadCallback(drawRegionsMap);
+
+      function drawRegionsMap() {
+        var data = google.visualization.arrayToDataTable([
+          ['Country', 'Sales Amount'],
+          ['Germany', 200],
+          ['United States', 300],
+          ['Brazil', 400],
+          ['Canada', 500],
+          ['France', 600],
+          ['Russia', 700]
+        ]);
+
+        var options = {};
+
+        var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+
+
+</head>
+<h3 style="margin-left: 500px; margin-top: 0px;">Order Status</h3>
+<a href="progresstable.html">
+  <div class="progress" style="margin-bottom: 90px;">
+    <div class="progress-bar progress-bar-success" role="progressbar" style="width:40%">
+      Order Delivered 40%
+    </div>
+    <div class="progress-bar progress-bar-warning" role="progressbar" style="width:10%">
+      Order Shipped 10%
+    </div>
+    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:50%">
+      Order Pending 50%
+    </div>
+  </div>
+</div>
+</a>
+
+<a href="productavailability.html"><div id="donutchart" style="width: 500px; height: 388px; "></div></a>
+<a href="todayssalesstatus.html"><div id="container" style="width: 550px; height: 400px; margin-top: -400px; margin-left: 496px;"></div></a>
+<h3>Sales Amount in Different Countries</h3>
+ <a href="salesregion.html"> <div id="regions_div" style="width: 900px; height: 500px;"></div></a>

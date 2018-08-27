@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Review</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<td>
+				<h3>Your review of this product</h3>
+				<img src="img.png" width="300">
+			</td>
+			<td>
+				Lorem Ipsum lorem ipsum  lorem ipsum  lorem ipsum  lorem ipsum
+			<br>
+				<p>Brand Name</p>
+			<br>
+
+				<h4>Rate it:*</h4>
+				<div class="rating">
+				<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star checked"></span>
+		<span class="fa fa-star"></span>
+		<span class="fa fa-star"></span>
+				</div>
+				<br>
+				<br>
+				<br>
+
+				<b>Review</b>
+				<br>
+				<br>
+
+				Title*
+				<input type="text" name="title" placeholder="Title">
+
+				<br>
+
+				Review*
+				<textarea placeholder="Review"></textarea>
+				<br>
+
+				Publish as*
+				<input type="text" name="publishAs" placeholder="Publish as">
+				<br><br>
+
+				<button>Send Your Review</button>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
+
+
+
+<style type="text/css">
+	
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  float: left;
+
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
+
+</style>

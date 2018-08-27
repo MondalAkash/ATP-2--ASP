@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sales Status</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+		function handle(elm)
+		{
+			if(elm.value== "Jan")
+			{
+
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+				// Define the chart to be drawn.
+				var data = google.visualization.arrayToDataTable([
+				['Month', 'Sales'],
+				['January', 400],
+				['February', 1500],
+				['March', 1500]
+
+				]);
+				var options = {
+				title: 'Monthly Sales Status',
+				isStacked:true	
+				};
+				// Instantiate and draw the chart.
+				var chart = new google.visualization.BarChart(document.getElementById('container'));
+				chart.draw(data, options);
+				}
+					
+			}
+			else if(elm.value== "Feb")
+			{
+
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+				// Define the chart to be drawn.
+				var data = google.visualization.arrayToDataTable([
+				['Month', 'Sales'],
+				['February', 500],
+				['March', 400]
+				
+
+				]);
+				var options = {
+				title: 'Monthly Sales Status',
+				isStacked:true	
+				};
+				// Instantiate and draw the chart.
+				var chart = new google.visualization.BarChart(document.getElementById('container'));
+				chart.draw(data, options);
+				}
+					
+			}
+			else 
+			{
+				document.getElementById("container").innerHTML="";
+			}
+
+		}
+		
+		
+
+	</script>
+
+</head>
+<body>
+	<form action="#" target="contentFrame2" name="fm">
+			From Month:
+			<select name="search" id="" onchange="javascript:handle(this)">
+				<option value="">Select Month</option>
+				<option value="Jan">January</option>
+				<option value="Feb">February</option>
+				
+			</select>
+	    </form>
+
+	  
+
+<div id="container" style="width: 550px; height: 400px; margin-top: 0px; margin-left: 0px;">
+	<table width="100%" cellspacing="0" border="1" cellpadding="5">
+    <tr>
+        <th align="left">Current Month Sale</th>
+		
+    </tr>
+    <tr>
+       
+        <td align="center">$7500/-</td>  
+				
+    </tr>
+    
+</table>
+</div>
+
+
+</body>
+</html>

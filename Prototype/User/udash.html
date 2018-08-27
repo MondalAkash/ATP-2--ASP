@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+    float: left;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: 25%;
+    height: 800px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    display: block;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    border: 1px solid #ccc;
+    width: 75%;
+    border-left: none;
+    height: 800px;
+}
+</style>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Sports Category', 20],
+          ['Phones',      2],
+          ['Mens Fashion',  30],
+          ['Mobile Accessories', 50]
+        ]);
+
+        var options = {
+          title: 'Your Order Categories',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <script language="JavaScript">
+function drawChart() {
+// Define the chart to be drawn.
+var data = google.visualization.arrayToDataTable([
+['Brand Name', 'Buy'],
+['Canon', 20],
+['Samsung', 25],
+['Le reve', 10],
+['Lenovo', 15]
+
+]);
+var options = {
+title: 'Brand & Your Orders',
+isStacked:true  
+};
+// Instantiate and draw the chart.
+var chart = new google.visualization.BarChart(document.getElementById('container'));
+chart.draw(data, options);
+}
+google.charts.setOnLoadCallback(drawChart);
+</script>
+</head>
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Personal Informations</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Address Book</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">My Orders</button>
+  <button class="tablinks" onclick="openCity(event, 'Search')">Search History</button>
+</div>
+
+<div id="London" class="tabcontent">
+  <h3>Personal Informations</h3>
+ <form>
+        <br/>
+        <table cellpadding="0" cellspacing="0">
+            <tr>
+                <td width="100"></td>
+                <td width="10"></td>
+                <td width="230"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td>Md. User</td>
+                <td rowspan="10" align="center" >
+                    <img width="128" src="pp/profile.jpg" style="margin-left: 384px;"/>
+                    
+                </td>
+            </tr>		
+            <tr><td colspan="3"><br></td></tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td>user@shop.com</td>
+            </tr>		
+            <tr><td colspan="3"><br></td></tr>			
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td>Male</td>
+            </tr>
+            <tr><td colspan="3"><br></td></tr>
+            <tr>
+                <td>Date of Birth</td>
+                <td>:</td>
+                <td>19/09/1998</td>
+            </tr>
+            <tr><td colspan="3"><br></td></tr>
+            <tr>
+                <td>Address</td>
+                <td>:</td>
+                <td>House: 0; Road: 0; Block: 0; Rampura, Dhaka</td>
+            </tr>
+            <tr><td colspan="3"><br></td></tr>
+            <tr>
+                <td>Status</td>
+                <td>:</td>
+                <td>Active</td>
+            </tr>
+        </table>	
+        <hr/>
+        <a href="edit.html" target="contentFrame1">Edit</a>
+        <a href="changepw.html" target="contentFrame1">Change Password</a>
+
+    </form>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Address Book</h3> 
+  <a href="addnewaddress.html">Add a New Address</a>
+  <table frame="box" width="250px">
+  	<tr>
+  		<td>
+  			Your Address:
+  			<hr>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Akash Mondal <br>
+  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Cell: 01777777777
+  		</td>
+  	</tr>
+  	<tr>
+  		<td><hr></td>
+  	</tr>
+  	<tr>
+  		<td>
+  			<a href="editadd.html">Edit This Address</a>
+  		</td>
+  	</tr>
+  </table> 
+  <a href="Add a New Address"></a>
+  <i>
+  	<b>
+  		Additional Addresses:
+  	</b>
+  </i>
+  <hr>
+   <table frame="box" width="250px">
+  	<tr>
+  		<td>
+  			Your Address:
+  			<hr>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Akash Mondal <br>
+  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Cell: 01777777777
+  		</td>
+  	</tr>
+  	<tr>
+  		<td><hr></td>
+  	</tr>
+  	<tr>
+  		<td>
+  			<a href="editadd.html">Edit This Address</a> || 
+  			<a href="#">Delete This Address</a> || 
+  			<a href="#">Set as Default Delivery Address</a>
+  		</td>
+  	</tr>
+  </table>
+	
+  <table frame="box" width="250px" style="margin-top: -200px; margin-left: 333px;">
+  	<tr>
+  		<td>
+  			Your Address:
+  			<hr>
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Akash Mondal <br>
+  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+  		</td>
+  	</tr>
+  	<tr>
+  		<td>
+  			Cell: 01777777777
+  		</td>
+  	</tr>
+  	<tr>
+  		<td><hr></td>
+  	</tr>
+  	<tr>
+  		<td>
+  			<a href="editadd.html">Edit This Address</a> || 
+  			<a href="#">Delete This Address</a> || 
+  			<a href="#">Set As Default Delivery Address</a>
+  		</td>
+  	</tr>
+  </table>
+
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>My Orders</h3>
+ 	<a href="purchasehistory.html"><div id="donutchart" style="width: 500px; height: 388px; "></div></a>
+	<a href="brandorder.html"><div id="container" style="width: 550px; height: 400px; margin-top: -180px;"></div></a>
+</div>
+<div id="Search" class="tabcontent">
+	<h3>Most Searched Item</h3>
+	<table width="30%" border="2px">
+		<tr>
+			<th>
+				Item Name
+			</th>
+			<th>
+				Category Name
+			</th>
+		</tr>
+		<tr>
+			<td>
+				DSLR Camera
+			</td>
+			<td>
+				Cameras
+			</td>
+			<td>
+				<a href="../Product/productdes/cameras.html">Details</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Samsung Mobile
+			</td>
+			<td>
+				Phones & Tablets
+			</td>
+			<td>
+				<a href="../Product/productdes/cameras.html">Details</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html> 

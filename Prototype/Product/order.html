@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order</title>
+</head>
+<body>
+	<p>Please fill up the following</p>
+<table>
+	<tr>
+		<td>Contact Number*
+			<input type="text" name="contact" placeholder="+8801" value="01777777777"></td>
+	</tr>
+	<tr>
+		<td>
+			Shipping Address*: <br>
+			Your Address
+			<table frame="box" width="250px">
+			  	<tr>
+			  		<td>
+			  			Akash Mondal <br>
+			  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			Cell: 01777777777
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td><hr></td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			<a href="#">Use This Address</a>
+			  		</td>
+			  	</tr>
+			  </table> 
+			   <table frame="box" width="250px" style="margin-top:-138px;margin-left: 296px;">
+			  	<tr>
+			  		<td>
+			  			Akash Mondal <br>
+			  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			Cell: 01777777777
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td><hr></td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			<a href="#">Use This Address</a>
+			  			
+			  		</td>
+			  	</tr>
+			  </table>
+				
+			  <table frame="box" width="250px" style="margin-top: -138px; margin-left: 600px;">
+			  	<tr>
+			  		<td>
+			  			Akash Mondal <br>
+			  			House no.: 0, Road No.: 0; Block: Q; Rampura, Dhaka
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			Cell: 01777777777
+			  		</td>
+			  	</tr>
+			  	<tr>
+			  		<td><hr></td>
+			  	</tr>
+			  	<tr>
+			  		<td>
+			  			<a href="#">Use This Address</a>
+			  			
+			  		</td>
+			  	</tr>
+			  	
+			  </table>
+<a href="../user/addnewaddress.html">Add a New Address</a>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+		Preferred Date & Time*
+	<input type="datetime-local" name="dateTime">	
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			Payment Method*
+	<select id="paymentSelect" onchange="myFunction()">
+		<option value="" selected>Select</option>
+		<option value="BKash">BKash</option>
+		<option value="DBBL">DBBL</option>
+		<option value="CreditCard">Credit Card</option>
+		<option value="ondelivery">Cash On Delivery</option>
+	</select>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			
+		<p id="selected"></p>
+		
+		<input type="text" name="bkashoption" id="bkashoption" placeholder="Bkash Number">
+		<input type="text" name="dbbloption" id="dbbloption" placeholder="DBBL Number">
+		<input type="text" name="creditoption" id="creditoption" placeholder="Credit Card No.">
+			
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<input type="button" name="order" value="Place Order">
+		</td>
+	</tr>
+
+</table>
+	
+
+
+<!--aria-hidden="true"-->
+<script>
+
+document.getElementById("bkashoption").style.visibility = "hidden";
+document.getElementById("dbbloption").style.visibility = "hidden";
+document.getElementById("creditoption").style.visibility = "hidden";
+					   	
+
+function myFunction() {
+
+	var y = document.getElementById("paymentSelect").options[document.getElementById('paymentSelect').selectedIndex].text;
+
+	var x = document.getElementById("paymentSelect").value;
+
+	if(x!="")
+	{
+		document.getElementById("selected").innerHTML = "You selected: " + y +" option.";
+	}
+
+    
+    
+    if(x==="BKash"){
+    	document.getElementById("bkashoption").style.visibility = "visible";
+    	document.getElementById("dbbloption").style.visibility = "hidden";
+    	document.getElementById("creditoption").style.visibility = "hidden";
+    }
+    else if(x==="DBBL"){
+    	document.getElementById("dbbloption").style.visibility = "visible";
+    	document.getElementById("bkashoption").style.visibility = "hidden";
+    	document.getElementById("creditoption").style.visibility = "hidden";
+    }
+    else if(x==="CreditCard"){
+    	document.getElementById("creditoption").style.visibility = "visible";
+    	document.getElementById("dbbloption").style.visibility = "hidden";
+    	document.getElementById("bkashoption").style.visibility = "hidden";
+    }
+    else{
+    	document.getElementById("creditoption").style.visibility = "hidden";
+    	document.getElementById("dbbloption").style.visibility = "hidden";
+    	document.getElementById("bkashoption").style.visibility = "hidden";
+    }
+    
+}
+</script>
+
+</body>
+</html>
+
+<style type="text/css">
+	#dbbloption{
+		margin-left: -153px;
+	}
+
+	#creditoption{
+		margin-left: -155px;
+	}
+</style>

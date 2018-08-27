@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	
+	<title>Login Page</title>
+	<script>
+		function validate()
+		{
+			if(document.fm.username.value == "a" && document.fm.password.value == "1")
+			{
+				window.location.href="../Admin/index.html";
+				//window.location.replace("../Admin/index.html");
+				//window.location.replace("file:///D:/ATP2/prototype/Admin/index.html");
+			}
+			else if(document.fm.username.value == "u" && document.fm.password.value == "1")
+			{
+				window.location.href="../User/index.html";
+				//window.location.replace("../user/index.html");
+			}
+			else if(document.fm.username.value == "b" && document.fm.password.value == "1")
+			{
+				window.location.href="../BusinessRepresentative/index.html";
+				//window.location.replace("../user/index.html");
+			}
+			else
+			{
+				alert("incorrct Id or Password");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="#" name="fm">
+		<fieldset style="width: 500px; margin-left: 400px;">
+	<table>
+			<legend>Login Here</legend>
+			
+				<tr>
+					<td>
+						User Name:
+					</td>
+					<td>
+						<input type="text" name="username" id="" required="required">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Password: 
+					</td>
+					<td>
+						<input type="password" name="password" id="" required="required">
+					</td>
+				</tr> 
+
+			
+		
+	</table>
+	<input type="button" value="Login" onclick="return validate();">
+	</form>
+	</fieldset>
+</body>
+</html>

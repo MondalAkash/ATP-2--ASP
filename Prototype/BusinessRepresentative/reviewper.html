@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Review Status', 'Review Percentage'],
+          ['Good Review',     80],
+          ['Bad Review',      20]
+         
+        ]);
+
+        var options = {
+          title: 'My Product Review Status',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+</head>
+<body>
+	<a href="reviewtable.html" style="width: 600px; height: 600px;"><div id="piechart" style="width: 419px; height: 388px;"></div></a>
+</body>
+</html>

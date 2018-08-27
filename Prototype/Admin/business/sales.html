@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sales Status</title>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>
+		function handle()
+		{
+			if(document.fm.search.value == "Company_Name" && document.fm.searchuser.value=="x" )
+			{
+
+				google.charts.load('current', {'packages':['corechart']});
+				google.charts.setOnLoadCallback(drawChart);
+				function drawChart() {
+				// Define the chart to be drawn.
+				var data = google.visualization.arrayToDataTable([
+				['Year', 'Sales'],
+				['2015', 1000],
+				['2016', 250],
+				['2017', 400],
+				['2018', 1500]
+
+				]);
+				var options = {
+				title: 'Sales per year for X Company',
+				isStacked:true	
+				};
+				// Instantiate and draw the chart.
+				var chart = new google.visualization.BarChart(document.getElementById('container'));
+				chart.draw(data, options);
+				}
+					
+			}
+			else 
+			{
+				document.getElementById("container").innerHTML="";
+			}
+
+		}
+		
+		
+
+	</script>
+
+</head>
+<body>
+	<form action="#" target="contentFrame2" name="fm">
+			Search By:
+			<select name="search" id="" >
+				<option value="">Search By</option>
+				<option value="Company_Name">Company_Name</option>
+				<option value="Trade_License_No.">Trade License No.</option>
+			</select>
+	    	<input style="width:50%;" type="text" name="searchuser" id="su"> 
+	    	<input type="submit" value="Search" class="btn btn-info" onclick="return handle()">
+	    </form>
+
+	  
+
+<div id="container" style="width: 550px; height: 400px; margin-top: 0px; margin-left: 0px;"></div>
+
+
+</body>
+</html>

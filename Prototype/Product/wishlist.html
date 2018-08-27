@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Add To Cart</title>
+	<script>
+		/*var index, table = document.getElementById('tabl');
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                table.rows[i].cells[4].onclick = function()
+                {
+                    var c = confirm("do you want to delete this row");
+                    if(c === true)
+                    {
+                        index = this.parentElement.rowIndex;
+                        table.deleteRow(index);
+                    }
+                    
+                    console.log(index);
+                };
+                
+            }*/
+            function deleteRow(tblName, rowId)
+{
+       var tbl = document.getElementById(tblName);
+	//var tbody = document.getElementById(cid).getElementsByTagName("TBODY")[4];
+
+	var rowNum = document.getElementById('rowNum' + rowId);
+	
+	if (tbl.rows.length >1)
+	{
+          tbl.deleteRow(rowId);
+	  //tbody.removeChild(rowNum);
+	
+	}
+	
+}
+
+		function handleSelect(elm)
+		{
+		var tot = elm.value;
+		var u = document.fm1.unit1.value;
+		var x = tot*u;
+		
+		document.getElementById("uun1").innerHTML=x;
+		}
+
+		function handleSelectt(elm)
+		{
+		var tot = elm.value;
+		var u = document.fm2.unit2.value;
+		var x = tot*u;
+		
+		document.getElementById("uun2").innerHTML=x;
+		}
+
+		
+	</script>
+</head>
+<body>
+	<h2>Wishlist</h2>
+		<table id="tabl" border="1px" >
+			<TBODY>
+
+		<tr align="center">
+			<th>Product</th>
+			<th>Date</th>
+			<th>Availability</th>
+			<th>Price</th>
+			<th></th>
+		</tr>
+			
+		<tr align="center">
+			<td>
+				<a href="productdes/cameras.html"><img src="productimages/cameras/1.jpg" alt="camera" width="100px" height="100px"></a>
+				<a href="productdes/cameras.html" style="font-size: 15px;">Canon 1300D - 18.0 MP - 3x Optical Zoom - DSLR Camera</a>
+			</td>
+			<td>
+				10/10/18
+			</td>
+			
+			<td>
+				In Stock
+			</td>
+
+			<td>
+				$90
+			</td>
+			
+			<td><a href='javascript:deleteRow("tabl", 1)'>Remove</a></td>
+			<td><a href="addtocart.html">Add To Cart</a></td>
+		</tr>
+
+
+</TBODY>
+	</table>
+	<a href="index.html">Continue To Shopping</a>
+</body>
+
+
+ 
+</html>

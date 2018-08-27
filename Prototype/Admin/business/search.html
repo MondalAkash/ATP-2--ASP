@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Userlist</title>
+	<script>
+		function handle(elm)
+		{
+		var tot = elm.value;
+		document.getElementById("su").placeholder=tot;
+		}
+	</script>
+</head>
+<body>
+	<form>
+			Search By:
+			<select name="search" id="" onchange="javascript:handle(this);">
+				<option value="">Search By</option>
+				<option value="Company_Name">Company Name</option>
+				<option value="Owner_Name">Owner Name</option>
+				<option value="Trade_License_No.">Trade License No.</option>
+			</select>
+	    	<input style="width:50%;" type="text" name="searchuser" id="su"> 
+	    	<input type="submit" value="Search" class="btn btn-info">
+	    </form>
+	 </div>
+    
+    <div class="reg_form">
+		<table border="2px" width="100%">
+			<tr align="center" >
+				<th>
+					Company Name
+				</th>
+				<th>
+					Owner name
+				</th>
+				<th>
+					Options
+				</th>
+			</tr>
+			
+			<tr>
+				<td align="center">
+					Demo company
+				</td>
+				<td align="center">
+					Md. Demo
+				</td>
+				
+				<td align="center">
+					<a href="profile.html">Details</a> | 
+					<a href="edit.html">Edit</a> | 
+					<a href="delete.html">Delete</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					Demo company
+				</td>
+				<td align="center">
+					Md. Demo
+				</td>
+				
+				<td align="center">
+					<a href="profile.html">Details</a> | 
+					<a href="edit.html">Edit</a> | 
+					<a href="delete.html">Delete</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					Demo company
+				</td>
+				<td align="center">
+					Md. Demo
+				</td>
+				
+				<td align="center">
+					<a href="profile.html">Details</a> | 
+					<a href="edit.html">Edit</a> | 
+					<a href="delete.html">Delete</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="center">
+					Demo company
+				</td>
+				<td align="center">
+					Md. Demo
+				</td>
+				
+				<td align="center">
+					<a href="profile.html" >Details</a> | 
+					<a href="edit.html" >Edit</a> | 
+					<a href="delete.html" >Delete</a>
+				</td>
+			</tr>
+
+		</table>
+		<a href="registration.html"> Add New Representative</a>
+	</div>
+</body>
+</html>

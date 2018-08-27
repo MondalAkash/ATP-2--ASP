@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage</title>
+	<script>
+		function handleSelect(elm)
+		{
+		window.location = elm.value+".html";
+		}
+	</script>
+	<style>
+		 /* Dropdown Button */
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    width: 198px;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 198px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;} 
+	</style>
+</head>
+<body>
+	<fieldset>
+		<strong style="font-weight: bold;font-size: 18px;"><a href="index.html" style="color: black;text-decoration: none;">Welcome to E-Commerce Webite</a></strong>
+		
+		
+		<a href="../Product/addtocart.html" style="margin-left: 800px;" target="contentFrame1">My Cart</a>
+		
+		<br>
+		<a href="../Login/index.html"  style="margin-left: 1059px;">Login</a>/
+		<a href="../Registration/index.html">Join</a>
+		<form action="#" style="margin-top: 10px;margin-left: 435px;">
+			<select name="category" id="" style="cursor: pointer;">
+				<option value="#" selected>Category1</option>
+				<option value="#">Category2</option>
+				<option value="#">Category3</option>
+			</select>
+			<input type="text" name="search" id="" placeholder="Enter Your keyword Here" style="width: 200px;">
+			<input type="submit" value="Search" style="cursor: pointer;">
+		</form>
+
+	</fieldset>
+
+	<table width="100%" cellspacing="0" cellpadding="10" border="1">
+		 <tr>
+        <td width="200" valign="top">
+			 <div class="dropdown">
+			  <button class="dropbtn">Categories</button>
+			  <div class="dropdown-content">
+			     <a href="../Product/productpages/mens/index.html" target="contentFrame1">Men's Fashion</a><br>
+                <a href="../Product/productpages/womens/index.html" target="contentFrame1">Women's Fashion</a><br>
+                <a href="../Product/productpages/phones/index.html" target="contentFrame1">Phones & Tablets</a><br>
+                <a href="../Product/productpages/cameras/index.html" target="contentFrame1">Cameras</a><br>
+                <a href="../Product/productpages/watches/index.html" target="contentFrame1">Watches</a><br>
+                
+			  </div>
+			</div> 
+        <td valign="top">
+            <iframe name="contentFrame1" frameborder="0" width="100%" height="1000px" src="../Product/index.html"></iframe>
+        </td>
+    </tr>
+	</table>
+
+
+	
+	
+</body>
+</html>

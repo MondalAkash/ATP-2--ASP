@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Delete In Active Users</title>
+	<script>
+		           function deleteRow(tblName, rowId)
+{
+       var tbl = document.getElementById(tblName);
+	//var tbody = document.getElementById(cid).getElementsByTagName("TBODY")[4];
+
+	var rowNum = document.getElementById('rowNum' + rowId);
+	
+	if (tbl.rows.length >1)
+	{
+          tbl.deleteRow(rowId);
+	  //tbody.removeChild(rowNum);
+	
+	}
+	
+}
+
+	</script>
+</head>
+<body>
+	<table id="tabl" border="3px solid">
+		<tr>
+			<th>
+				User Name
+			</th>
+			<th>
+				Customer Since
+			</th>
+			<th>
+				Active Before
+			</th>
+			<th>
+				Option
+			</th>
+		</tr>
+		<tr>
+			<td>
+				Demo 1
+			</td>
+			<td>
+				18/12/17
+			</td>
+			<td>
+				100 Days Ago
+			</td>
+			<td style="cursor: pointer;">
+				<a href='javascript:deleteRow("tabl", 1)'>Remove</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Demo 2
+			</td>
+			<td>
+				18/12/17
+			</td>
+			<td>
+				100 Days Ago
+			</td>
+			<td style="cursor: pointer;">
+				<a href='javascript:deleteRow("tabl", 2)'>Remove</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Demo 3
+			</td>
+			<td>
+				18/12/17
+			</td>
+			<td>
+				100 Days Ago
+			</td>
+			<td style="cursor: pointer;">
+				<a href='javascript:deleteRow("tabl", 3)'>Remove</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
